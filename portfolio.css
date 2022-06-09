@@ -1,0 +1,395 @@
+body {
+    background-color: #0F1F2F;
+    font-family: 'Inter';
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-bottom: 0.01em solid #9A9999;
+    border-top: 5px solid #EFD7B5;
+    border-right: 1px solid #9A9999;
+    border-left: 1px solid #9A9999;
+    opacity: 0;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+.navbar ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    padding: 5px 10px;
+}
+
+.navbar ul li {
+    color: #AAD8FF;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: #AAD8FF;
+    cursor: pointer;
+}
+
+
+.navbar ul:hover li {
+    font-size: 21px;
+}
+
+
+.navbar ul a#onlink {
+    color: #EFD7B5;
+}
+
+.navbar ul li#onlink {
+    color: #EFD7B5;
+}
+
+.middle-line {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 15px;
+    height: 0;
+    background-color:#EFD7B5;
+    animation: slideDown 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+    from {
+        height: 0;
+    }
+    to {
+        height: 25.3rem;
+    }
+}
+
+.line1 {
+    position: fixed;
+    top: 55px;
+    left: 32%;
+    width: 10px;
+    height: 0;
+    background-color: #9A9999;
+    animation: slideDownSmall 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDownSmall {
+    from {
+        height: 0;
+    }
+    to {
+        height: 45px;
+    }
+}
+
+.line2 {
+    position: fixed;
+    top: 55px;
+    right: 32%;
+    width: 10px;
+    height: 0;
+    background-color: #9A9999;
+    animation: slideDownSmall 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.line3 {
+    position: fixed;
+    top: 55px;
+    left: 50%;
+    width: 10px;
+    height: 0;
+    background-color: #9A9999;
+    animation: slideDownSmall 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+.content {
+    width: 100%;
+}
+
+.content .half-left h1 {
+    position: relative;
+    margin-left: 26%;
+    top: 13.5rem;
+    font-weight: 100;
+    color: #9A9999;
+    font-size: 60px;
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-fill-mode: forwards;
+}
+
+.content .half-right h1 {
+    position: relative;
+    margin-left: 52%;
+    top: 6.5rem;
+    font-weight: 100;
+    font-size: 60px;
+    color: #EFD7B5;
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.content .top h1 {
+    display: none;
+}
+
+.content .bottom h1 {
+    position: relative;
+    text-align: center;
+    top: 12rem;
+    font-weight: 100;
+    font-size: 40px;
+    color: #9A9999;
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+
+.content .bottom h1 span {
+    color: #AAD8FF;
+}
+
+.social {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 4%;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-fill-mode: forwards;
+}
+
+.social a {
+    text-decoration: none;
+    color:#EFD7B5;
+    padding: 0 0 15px 0;
+}
+
+.social a:hover  {
+    color: #AAD8FF;
+}
+
+.straight-line {
+    width: 1px;
+    height: 0;
+    background-color: #EFD7B5;
+    animation: slideUp 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+    from {
+        height: 0;
+    }
+    to {
+        height: 8rem;
+    }
+}
+
+/* desktop */
+@media screen and (max-width: 2560px) {
+    
+}
+
+/* laptopL */
+@media screen and (max-width: 1440px) {
+    .content .half-left h1 {
+        font-size: 50px;
+        top: 14.5rem;
+        margin-left: 25%;
+    }
+    .content .half-right h1 {
+        font-size: 50px;
+        top: 8.7rem;
+    }
+    .content .bottom h1 {
+        font-size: 35px;
+        top: 15rem;
+    }
+}
+
+/* laptop */
+@media screen and (max-width: 1024px) {
+    .content .half-left h1 {
+        position: absolute;
+        top: 23rem;
+        margin-left: 17%;
+    }
+    .content .half-right h1 {
+        top: 14.7rem;
+    }
+    .content .bottom h1 {
+        top: 21rem;
+    }
+    .navbar {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .navbar ul li,
+    .navbar ul a {
+        font-size: 16px;
+    }
+    .navbar ul:hover li {
+        font-size: 18px;
+    }
+    .line1 {
+        left: 30%;
+    }
+    .line2 {
+        right: 31%;
+    }
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    .content .half-left h1 {
+        display: none;
+    }
+    .content .half-right h1 {
+        display: none;
+    }
+    .content .bottom h1 {
+        font-size: 23px;
+        top: 14rem;
+        animation-delay: 1s;
+    }
+    .content .top h1 {
+        position: relative;
+        display: block;
+        font-weight: 100;
+        font-size: 35px;
+        text-align: center;
+        color: #EFD7B5;
+        top: 10rem;
+        opacity: 0;
+        animation: fadeIn 3s;
+        animation-fill-mode: forwards;  
+    }
+    .content .top h1 span {
+        color:#9A9999;
+        font-size: 32px;
+    }
+    .navbar ul li,
+    .navbar ul a {
+        font-size: 15px;
+    }
+    .navbar ul:hover li {
+        font-size: 16px;
+    }
+    .middle-line {
+        display: none;
+    }
+    .line1 {
+        width: 6px;
+    }
+    @keyframes slideDownSmall {
+        from {
+            height: 0;
+        }
+        to {
+            height: 35px;
+        }
+    }
+    .line2 {
+        width: 6px;
+    }
+    .line3 {
+        width: 6px;
+    }
+}
+
+/* mobileL */
+@media screen and (max-width: 500px) {
+    .navbar {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+    .line1 {
+        display: none;
+    }
+    .line2 {
+        display: none;
+    }
+    .line3 {
+        display: none;
+    }
+}
+
+/* mobileM */
+@media screen and (max-width: 375px) {
+    .content .bottom h1 {
+        font-size: 20px;
+        top: 11rem;
+    }
+    .content .top h1 {
+        font-size: 31px;
+        top: 9rem;
+    }
+    .social a {
+        font-size: 18px;
+    }
+}
+
+/* mobileS */
+@media screen and (max-width: 320px) {
+    .content .bottom h1 {
+        font-size: 17px;
+        top: 9rem;
+    }
+    .content .top h1 {
+        font-size: 25px;
+        top: 7rem;
+    }
+    .content .top h1 span {
+        font-size: 23px;
+    }
+    .navbar {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .navbar ul li,
+    .navbar ul a {
+        font-size: 11px;
+    }
+    .navbar ul:hover li {
+        font-size: 12px;
+    }
+    .social a {
+        font-size: 16px;
+    }
+}
+
+
