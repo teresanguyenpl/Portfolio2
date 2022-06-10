@@ -129,11 +129,11 @@ body {
 
 }
 
-.content {
+.home-content {
     width: 100%;
 }
 
-.content .half-left h1 {
+.home-content .half-left h1 {
     position: relative;
     margin-left: 26%;
     top: 13.5rem;
@@ -145,7 +145,7 @@ body {
     animation-fill-mode: forwards;
 }
 
-.content .half-right h1 {
+.home-content .half-right h1 {
     position: relative;
     margin-left: 52%;
     top: 6.5rem;
@@ -158,11 +158,11 @@ body {
     animation-fill-mode: forwards;
 }
 
-.content .top h1 {
+.home-content .top h1 {
     display: none;
 }
 
-.content .bottom h1 {
+.home-content .bottom h1 {
     position: relative;
     text-align: center;
     top: 12rem;
@@ -175,7 +175,7 @@ body {
     animation-fill-mode: forwards;
 }
 
-.content .bottom h1 span {
+.home-content .bottom h1 span {
     color: #AAD8FF;
 }
 
@@ -219,6 +219,83 @@ body {
     }
 }
 
+.about-content {
+    position: absolute;
+    width: 70%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-content .picture {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 350px;
+
+    animation: slideIn 3s;
+    animation-fill-mode: forwards;
+}
+
+.about-content .picture img {
+    position: relative;
+    width: auto;
+    height: 90%;
+}
+
+.about-content .picture .bg {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 300px;
+    background-color: #364859;
+    height: 90%;
+}
+
+.about-content:hover .picture img {
+    left: 2%;
+    opacity: 0.9;
+}
+
+.about-content:hover .picture .bg {
+    background-color: #1F3041;
+    top: 8%;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.9;
+    }
+}
+
+.about-content .info {
+    position: relative;
+    float: right;
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    color: #9A9999;
+    animation: slideIn 3s;
+    animation-fill-mode: forwards;
+}
+
+.about-content .info h2 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.about-content .info h2 span {
+    color: #EFD7B5;
+}
+
+.about-content .info h2 span2 {
+    color: #AAD8FF;
+}
+
 /* desktop */
 @media screen and (max-width: 2560px) {
     
@@ -226,16 +303,16 @@ body {
 
 /* laptopL */
 @media screen and (max-width: 1440px) {
-    .content .half-left h1 {
+    .home-content .half-left h1 {
         font-size: 50px;
         top: 14.5rem;
         margin-left: 25%;
     }
-    .content .half-right h1 {
+    .home-content .half-right h1 {
         font-size: 50px;
         top: 8.7rem;
     }
-    .content .bottom h1 {
+    .home-content .bottom h1 {
         font-size: 35px;
         top: 15rem;
     }
@@ -243,15 +320,15 @@ body {
 
 /* laptop */
 @media screen and (max-width: 1024px) {
-    .content .half-left h1 {
+    .home-content .half-left h1 {
         position: absolute;
         top: 23rem;
         margin-left: 17%;
     }
-    .content .half-right h1 {
+    .home-content .half-right h1 {
         top: 14.7rem;
     }
-    .content .bottom h1 {
+    .home-content .bottom h1 {
         top: 21rem;
     }
     .navbar {
@@ -271,22 +348,34 @@ body {
     .line2 {
         right: 31%;
     }
+    .about-content .picture {
+        height: 280px;
+    }
+    .about-content .picture .bg {
+        width: 240px;
+    }
+    .about-content .info {
+        top: 1rem;
+    }
+    .about-content .info h2 {
+        font-size: 22px;
+    }
 }
 
 /* tablet */
 @media screen and (max-width: 768px) {
-    .content .half-left h1 {
+    .home-content .half-left h1 {
         display: none;
     }
-    .content .half-right h1 {
+    .home-content .half-right h1 {
         display: none;
     }
-    .content .bottom h1 {
+    .home-content .bottom h1 {
         font-size: 23px;
         top: 14rem;
         animation-delay: 1s;
     }
-    .content .top h1 {
+    .home-content .top h1 {
         position: relative;
         display: block;
         font-weight: 100;
@@ -298,7 +387,7 @@ body {
         animation: fadeIn 3s;
         animation-fill-mode: forwards;  
     }
-    .content .top h1 span {
+    .home-content .top h1 span {
         color:#9A9999;
         font-size: 32px;
     }
@@ -329,6 +418,23 @@ body {
     .line3 {
         width: 6px;
     }
+    .about-content .picture {
+        float: none;
+        top: 5rem;
+        width: 100%;
+        text-align: center
+    }
+    .about-content .picture .bg {
+        display: none;
+    }
+    .about-content .info {
+        float: none;
+        top: 7rem;
+        width: 100%;
+    }
+    .about-content .info h2 {
+        font-size: 19px;
+    }
 }
 
 /* mobileL */
@@ -350,30 +456,37 @@ body {
 
 /* mobileM */
 @media screen and (max-width: 375px) {
-    .content .bottom h1 {
+    .home-content .bottom h1 {
         font-size: 20px;
         top: 11rem;
     }
-    .content .top h1 {
+    .home-content .top h1 {
         font-size: 31px;
         top: 9rem;
     }
     .social a {
         font-size: 18px;
     }
+    .about-content .picture {
+        top: 6rem;
+        height: 250px;
+    }
+    .about-content .info {
+        top: 8rem;
+    }
 }
 
 /* mobileS */
 @media screen and (max-width: 320px) {
-    .content .bottom h1 {
+    .home-content .bottom h1 {
         font-size: 17px;
         top: 9rem;
     }
-    .content .top h1 {
+    .home-content .top h1 {
         font-size: 25px;
         top: 7rem;
     }
-    .content .top h1 span {
+    .home-content .top h1 span {
         font-size: 23px;
     }
     .navbar {
@@ -389,6 +502,13 @@ body {
     }
     .social a {
         font-size: 16px;
+    }
+    .about-content .picture {
+        top: 8rem;
+        height: 220px;
+    }
+    .about-content .info h2 {
+        font-size: 15px;
     }
 }
 
