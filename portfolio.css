@@ -350,12 +350,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
     opacity: 0;
     animation: fadeIn 3s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .project-content .pj {
@@ -377,7 +377,7 @@ body {
     z-index: 1;
 }
 
-.project-content .pj:hover {
+.center .grid .project-content:hover {
     box-shadow: 0 0 1rem 0 #EFD7B5;
 }
 
@@ -395,11 +395,11 @@ body {
     color: #EFD7B5;
 }
 
-.project-content .pj:hover h5 {
+.project-content:hover .pj h5 {
     color: white;
 }
 
-.project-content .pj:hover h3 {
+.project-content:hover .pj h3 {
     text-shadow: 0 0 10px #fff;
 }
 
@@ -409,6 +409,25 @@ body {
     height: 55%;
     background-size: cover;
     background-position: center center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.center .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
+    grid-gap: calc(2rem + 2vw);
+    text-align: center;
 }
 
 /* desktop */
@@ -475,10 +494,6 @@ body {
     .about-content .info h2 {
         font-size: 22px;
     }
-    .project-content {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-    }
     .project-content .pj {
         width: calc(8.5rem + 15vw);
         height: 17rem;
@@ -488,6 +503,13 @@ body {
     }
     .project-content .pj h5 {
         font-size: 12px;
+    }
+    .center {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .center .grid {
+        grid-gap: calc(1.5rem + 1.5vw);
     }
 }
 
@@ -577,6 +599,9 @@ body {
         width: calc(13rem + 16vw);
         height: 20rem;
     }
+    .center .grid {
+        grid-template-columns: minmax(100px, 1fr);
+    }
 }
 
 /* mobileL */
@@ -594,13 +619,13 @@ body {
     .line3 {
         display: none;
     }
-    .project-content {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
     .project-content .pj {
         width: calc(11rem + 15vw);
         height: 17rem;
+    }
+    .center {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 }
 
@@ -636,10 +661,6 @@ body {
     .copyright {
         font-size: 15px;
     }
-    .project-content {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-    }
     .project-content .pj {
         width: calc(8.5rem + 15vw);
         height: 14rem;
@@ -649,6 +670,10 @@ body {
     }
     .project-content .pj h5 {
         font-size: 10px;
+    }
+    .center {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
     }
 }
 
