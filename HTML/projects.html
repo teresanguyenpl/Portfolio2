@@ -36,7 +36,7 @@
     <div class="line3"></div>
     <div class="center">
         <div class="grid">
-            <a href="#" class="project-content">
+            <a href="/HTML/cleverchat.html" target="_blank" class="project-content">
                 <div class="pj">
                     <div class="cc-img"></div>
                     <h3>CleverChat</h3>
@@ -44,28 +44,44 @@
                     <h5>Nov 2021 - Dec 2021</h5>
                 </div>
             </a>
-            <a href="/HTML/cleverchat.html" class="project-content">
+            <a href="/HTML/form.html" target="_blank" class="project-content">
                 <div class="pj">
-                    <div class="cc-img"></div>
-                    <h3>CleverChat</h3>
-                    <h5>NodeJS, JavaScript, Heroku, Postman, Android Studio, Java, PostgreSQL</h5>
+                    <div class="form-img"></div>
+                    <h3>Login - Register Forms</h3>
+                    <h5>HTML, CSS</h5>
+                    <h5>Jan 2022</h5>
+                </div>
+            </a>
+            <a href="/HTML/shopfies.html" target="_blank" class="project-content">
+                <div class="pj">
+                    <div class="shopfies-img"></div>
+                    <h3>Shopfies</h3>
+                    <h5>PHP, Html, Css, GCloud(GCP), Bootstrap</h5>
                     <h5>Nov 2021 - Dec 2021</h5>
                 </div>
             </a>
-            <a href="#" class="project-content">
+            <a href="https://github.com/teresanguyenpl/Portfolio" target="_blank" class="project-content">
                 <div class="pj">
-                    <div class="cc-img"></div>
-                    <h3>CleverChat</h3>
-                    <h5>NodeJS, JavaScript, Heroku, Postman, Android Studio, Java, PostgreSQL</h5>
-                    <h5>Nov 2021 - Dec 2021</h5>
+                    <div class="portfolio-img"></div>
+                    <h3>Portfolio (this website)</h3>
+                    <h5>ReactJS, Styled-component</h5>
+                    <h5>January 2022</h5>
                 </div>
             </a>
-            <a href="#" class="project-content">
+            <a href="/HTML/salon.html" target="_blank" class="project-content">
                 <div class="pj">
-                    <div class="cc-img"></div>
-                    <h3>CleverChat</h3>
-                    <h5>NodeJS, JavaScript, Heroku, Postman, Android Studio, Java, PostgreSQL</h5>
-                    <h5>Nov 2021 - Dec 2021</h5>
+                    <div class="salon-img"></div>
+                    <h3>Saigon Hair Salon</h3>
+                    <h5>HTML, CSS, JavaScript</h5>
+                    <h5>February 2022</h5>
+                </div>
+            </a>
+            <a href="/HTML/pho.html" target="_blank" class="project-content">
+                <div class="pj">
+                    <div class="pho-img"></div>
+                    <h3>Pho Noah</h3>
+                    <h5>HTML, CSS, JavaScript</h5>
+                    <h5>March 2022</h5>
                 </div>
             </a>
         </div>
@@ -76,5 +92,21 @@
         <div class="straight-line">
         </div>
     </div> 
+
+    <!-- 3 lines of navbar disappear when scroll using jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+          $('.line1').fadeOut();
+          $('.line2').fadeOut();
+          $('.line3').fadeOut();
+        } else {
+          $('.line1').fadeIn();
+          $('.line2').fadeIn();
+          $('.line3').fadeIn();
+        }
+        });
+    </script>
 </body>
 </html>
