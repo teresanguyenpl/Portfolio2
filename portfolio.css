@@ -451,6 +451,14 @@ body {
     background-position: center center;
 }
 
+.project-content .pj .cal-img {
+    background-image: url(images/cal.png);
+    width: 100%;
+    height: 55%;
+    background-size: cover;
+    background-position: center center;
+}
+
 .center {
     display: flex;
     justify-content: center;
